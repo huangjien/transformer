@@ -1,6 +1,9 @@
 name: PR Title Validation
 
 on:
+    push:
+        branches:
+            - "**"
     pull_request:
         types:
             - opened
