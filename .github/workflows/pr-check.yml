@@ -24,7 +24,7 @@ jobs:
                 python-version: 3.8
             - name: print env
               run: |
-                env
-                echo $GITHUB_REF
                 echo $GITHUB_EVENT_PATH
                 cat "$GITHUB_EVENT_PATH"
+                current_title=$(jq --raw-output .pull_request.title "$GITHUB_EVENT_PATH")
+                old_title=$(jq --raw-output .changes.title.from "$GITHUB_EVENT_PATH")
