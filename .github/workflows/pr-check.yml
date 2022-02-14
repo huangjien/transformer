@@ -27,3 +27,4 @@ jobs:
                 env
                 echo $GITHUB_REF
                 echo $GITHUB_EVENT_PATH
+                jq "$GITHUB_EVENT_PATH"
