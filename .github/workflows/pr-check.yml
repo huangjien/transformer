@@ -28,3 +28,5 @@ jobs:
                 cat "$GITHUB_EVENT_PATH"
                 current_title=$(jq --raw-output .pull_request.title "$GITHUB_EVENT_PATH")
                 old_title=$(jq --raw-output .changes.title.from "$GITHUB_EVENT_PATH")
+                echo $current_title
+                echo $old_title
